@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkadiyaman=self.webpackChunkadiyaman||[]).push([[16],{4016:(a,e,n)=>{n.r(e),n.d(e,{default:()=>s});var t=n(5043),c=n(579);const s=(0,t.memo)((a=>{let{images:e,currentImageIndex:n}=a;return(0,c.jsx)("div",{className:"content-img ".concat(n===e.length?"active":""),style:{backgroundImage:"url(".concat(e[n],")")}})}))}}]);
+//# sourceMappingURL=16.33ddec20.chunk.js.map
