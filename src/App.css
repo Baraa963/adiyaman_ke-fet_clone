@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+  --back-color: #ffffff;
+  --background-color: #4d4575;
+  --button-color: #4d4575;
+  --border-rad-img: 0.75rem;
+  --primary-color: #71624f;
+  --secondary-color: #877858;
+}
+
+* {
+  /* font-family: 'Montserrat', sans-serif !important; */
+  font-family: Helvetica, sans-serif;
+}
+
+/* skeletons start  */
+
+/* start skeleton for images */
+.skeleton-image {
+  background-image: linear-gradient(
+    90deg,
+    rgba(216, 215, 215, 0.573),
+    rgba(253, 243, 243, 0.546),
+    #86cccc3c,
+    var(--secondary-color)
+  );
+  background-size: 1000%;
+  background-position: right;
+  border-radius: 20px;
+  width: 55%;
+  height: 650px;
+  position: absolute;
+  top: 5%;
+  right: 0;
+  animation: sweep 5s ease-in-out infinite alternate;
+  box-shadow: 0 0 6px 0 #a3a3a331;
+}
+
+@media (max-width: 1200px) {
+  .skeleton-image {
+    display: none;
+  }
+}
+
+/* end sekeleton for images */
+
+/* start skeleton for text areas */
+
+.skeleton-side-images {
+  background-image: linear-gradient(
+    90deg,
+    rgba(216, 215, 215, 0.573),
+    rgba(253, 243, 243, 0.546),
+    #86cccc3c,
+    var(--secondary-color)
+  );
+  background-size: 1000%;
+  background-position: right;
+  border-radius: 20px;
+  width: 100%;
+  height: 650px;
+  animation: sweep 5s ease-in-out infinite alternate;
+  box-shadow: 0 0 6px 0 #a3a3a331;
+}
+/* end skeleton for text areas */
+
+/* animation to skeletons  */
+@keyframes sweep {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+.App-header {
+  width: 90%;
+  margin-top: 10px;
+  margin-inline: auto;
+}
+
+.nav__link__active {
+  font-weight: bold !important;
+}

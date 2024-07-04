@@ -1,0 +1,147 @@
+.contact-us {
+  display: grid;
+  grid-auto-rows: minmax(auto, 82vh);
+  grid-template-areas: 'c-form c-form c-form c-form c-form c-form c-img c-img';
+  justify-items: center;
+  align-items: center;
+  gap: 0vh 0vw;
+}
+.contact-form {
+  display: grid;
+  grid-area: c-form;
+
+  grid-template-areas:
+    'c-p c-p c-p c-p'
+    'c-input1 c-input1 c-input1 c-input1'
+    'c-input2 c-input2 c-input2 c-input2'
+    'c-input3 c-input3 c-input3 c-input3'
+    'c-text c-text c-text c-text'
+    'c-button c-button c-button c-button';
+  width: 50vw;
+  gap: 0vh 0vw;
+  margin-left: 5vw;
+}
+.c-p {
+  display: grid;
+  grid-area: c-p;
+  font-size: 32px;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+.c-input1 {
+  display: grid;
+  grid-area: c-input1;
+}
+.c-input2 {
+  display: grid;
+  grid-area: c-input2;
+}
+.c-input3 {
+  display: grid;
+  grid-area: c-input3;
+}
+.c-input1,
+.c-input2,
+.c-input3 {
+  width: 45vw;
+  height: 7vh;
+  padding: 1vh 1vw;
+  font-size: 19px;
+  margin-bottom: 3vh;
+  border: 1px solid #d0b994;
+  border-radius: 7px;
+}
+.c-input1::placeholder,
+.c-input2::placeholder,
+.c-input3::placeholder {
+  font-size: 16px; /* Placeholder font boyutunu ayarlayın */
+}
+.c-input1:focus::placeholder,
+.c-input2:focus::placeholder,
+.c-input3:focus::placeholder,
+.c-text:focus::placeholder {
+  font-size: 15px;
+}
+
+.c-text {
+  display: grid;
+  grid-area: c-text;
+  width: 45vw;
+  height: 20vh;
+  border: 1px solid #d0b994;
+  border-radius: 7px;
+  padding: 2vh 1vw 0vh 1vw;
+  font-size: 19px;
+}
+.c-text::placeholder {
+  font-size: 16px; /* Placeholder font boyutunu ayarlayın */
+}
+.c-button {
+  display: grid;
+  grid-area: c-button;
+  width: 29vw;
+  height: 8vh;
+  margin-left: 8.5vw;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  border: 1px solid #d0b994;
+  border-radius: 7px;
+  background-color: transparent;
+  font-size: 19px;
+  cursor: pointer;
+}
+.c-span {
+  font-size: 18px;
+}
+.c-button:hover {
+  background-color: #d0b994;
+}
+.contact-img {
+  display: grid;
+  grid-area: c-img;
+}
+.c-img1 {
+  width: 37vw;
+  height: 58.6vh;
+  margin-right: 5vw;
+  margin-bottom: -0.2vh;
+  border: 3px solid #d0b994;
+  border-radius: 7px;
+}
+.error {
+  color: red;
+  padding: 0;
+  margin-top: -14px;
+  font-size: 15px;
+}
+@media (max-width: 1115px) {
+  .contact-us {
+    display: grid;
+    grid-template-areas: 'c-form c-form c-form c-form c-form c-form c-form c-form';
+  }
+  .contact-img {
+    display: none;
+  }
+  .contact-form {
+    width: 85vw;
+    gap: 0vh 0vw;
+    margin-left: 0vw;
+  }
+  .c-input1,
+  .c-input2,
+  .c-input3 {
+    width: 83vw;
+  }
+  .c-text {
+    width: 83vw;
+  }
+  .c-button {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+textarea {
+  resize: none !important;
+}

@@ -1,0 +1,172 @@
+.content {
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 85vh;
+  /* background-color: #fefefe;  istege bagli */
+}
+.content-img {
+  width: 60%;
+  aspect-ratio: 13 / 9;
+  z-index: -1;
+  border-radius: 7px;
+  padding-top: 5px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  transition: background-image 0.5s ease-in-out;
+  background-position: bottom;
+}
+
+@media (max-width: 1200px) {
+  .content {
+    height: 75vh !important;
+  }
+  .content-img {
+    display: none !important;
+  }
+
+  .content-center {
+    width: 100% !important;
+    align-items: center;
+    text-align: center !important ;
+  }
+
+  .content-center .desc {
+    line-height: 1.55 !important;
+  }
+  .content .title {
+    text-align: center !important;
+  }
+}
+
+.content-img.active {
+  opacity: 0;
+}
+
+.content-center {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.content-center .content-title {
+  font-size: 1.25rem;
+}
+.content-center .desc {
+  font-size: 1.125rem;
+  text-wrap: balance;
+}
+
+.content-center .content-title,
+.content-center .desc {
+  background-image: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.content-text {
+  margin-top: 10px;
+}
+.content-btn {
+  height: 52px;
+  width: 120px;
+  font-size: 16px;
+  background-image: url('../../Assets/images/logo/adiyaman-back.jpg');
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  border: 2px solid var(--primary-color);
+  transition: all 0.2s linear;
+}
+.content .content-btn a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-btn:hover {
+  background-color: var(--primary-color);
+  border-radius: 0.35rem;
+  -webkit-border-radius: 0.35rem;
+  -moz-border-radius: 0.35rem;
+  -ms-border-radius: 0.35rem;
+  -o-border-radius: 0.35rem;
+}
+.typing-indicator {
+  animation: yazma 1s infinite;
+  background-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+
+@keyframes yazma {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.content .imgTilte {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+@media (max-width: 472px) {
+  .content {
+    height: auto !important;
+  }
+  .content .desc {
+    font-size: 1.125rem;
+    text-align: justify;
+  }
+}
+.navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 25px;
+  cursor: pointer;
+}
+.navigation::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f4f6f7;
+  top: -8px;
+  left: -8px;
+  z-index: -5;
+ 
+}
+.navigation.left {
+  left: -22px;
+}
+.navigation.right {
+  right: -22px;
+}
+
+@media (max-width: 700px) {
+  .navigation.left {
+    left: -3px;
+  }
+  .navigation.right {
+    right: -3px;
+  }
+}
